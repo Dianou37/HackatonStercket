@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org">
+
+	<head>
+	<meta charset="UTF-8" />
+		<tilte>bienvenue sur Hackquest</title>
+	</head>
+	
+	<body>
+		<h1>Les armes</h1>
+		<ul>
+			<li th:each="arme : ${armes}">
+			<a th:href="@{/show/{id}(id=${arme.id})}" th:text="${arme.name}"/>
+			</li>
+		</ul>	
+		<nav th:fragment="menu">
+			<ul>
+				<li><a th:href="@{/addArme}">Créer une arme </a></li>
+				<li><a th:href="@{/addArme}">Consulter les armes </a></li>
+			</ul>
+		</nav>
+	</body>
+</html>

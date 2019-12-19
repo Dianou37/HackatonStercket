@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org">
+
+	<head>
+	<meta charset="UTF-8" />
+		<title>bienvenue sur Hackquest</title>
+	</head>
+	
+	<body>
+		<h1>Les armes</h1>
+		<form th:object="${arme}" method="post">
+			<p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</p>
+			<label for="name">Name : </label>
+			<input id="name" type="text" th:field="*{name}" /><br>
+			<button type="submit">Submit</button>
+			</form>
+		<nav th:insert="list :: menu"/>
+		</nav>
+	</body>
+</html>

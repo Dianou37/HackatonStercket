@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org">
+
+	<head>
+	<meta charset="UTF-8" />
+		<title>bienvenue sur Hackquest</title>
+	</head>
+	
+	<body>
+		<h1 th:text="${arme.name}"></h1>
+		<ul>
+			<li th:text="${arme.degat}"></li>
+		</ul>
+		<nav th:insert="list :: menu"/>
+	</body>
+</html>
