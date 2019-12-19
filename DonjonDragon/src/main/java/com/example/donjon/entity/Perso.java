@@ -1,23 +1,38 @@
 package com.example.donjon.entity;
 
+import java.util.Random;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
+
+import com.sun.istack.NotNull;
 
 @Entity
 public class Perso {
+	
+	public final int MAX = 80;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	@NotNull
+	@Size(min=2)
 	private String name;
 	private int hp;
 	private int maxHp;
 	private String image;
 	private int longitude;
 	private int latitude;
+	
+	public Perso() {
+		Random dice = new Random();
+		hp = dice.nextInt(MAX+20);
+		maxHp = 100;
+	}
 	
 	public String getName() {
 		return name;

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Donjon et Dragon</title>
+</head>
+<body>
+<h2>Personnages</h2>
+<ul>
+<li th:each="perso : ${persos}">
+	<p th:text="${perso.name}" />
+</li>
+</ul>
+<nav>
+	<ul>
+		<li><a th:href="@{/addPerso}">Créer un personnage</a>	</li>
+	</ul>
+</nav>
+
+</body>
+</html>
