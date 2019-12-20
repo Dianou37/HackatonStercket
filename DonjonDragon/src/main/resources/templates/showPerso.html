@@ -8,14 +8,15 @@
 	<h2 th:text="${perso.name}"></h2>
 	<ul>
 		<li th:text="'Hp : ' + ${perso.hp}"></li>
-		<li th:text="'Vigueur : ' + ${perso.vigueur}"></li>
-		<li th:text="'Agilité : ' + ${perso.agilite}"></li>
-		<li th:text="'Intelligence : ' + ${perso.intelligence}"></li>
-		<li th:text="'Ruse : ' + ${perso.ruse}"></li>
-		<li th:text="'Volonté : ' + ${perso.volonte}"></li>
-		<li th:text="'Presence : ' + ${perso.presence}"></li>
+		<li th:text="'Vigueur : ' + ${perso.vigueur}+ '/10'"></li>
+		<li th:text="'Agilité : ' + ${perso.agilite}+ '/10'"></li>
+		<li th:text="'Intelligence : ' + ${perso.intelligence}+ '/10'"></li>
+		<li th:text="'Ruse : ' + ${perso.ruse}+ '/10'"></li>
+		<li th:text="'Volonté : ' + ${perso.volonte}+ '/10'"></li>
+		<li th:text="'Presence : ' + ${perso.presence}+ '/10'"></li>
 		
 	</ul>
+	<nav th:insert="listPerso :: menu"/>
 	
 
 </body>

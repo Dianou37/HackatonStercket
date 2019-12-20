@@ -11,9 +11,10 @@
 	<a th:href="@{'/showPerso/'+${perso.id}}" th:text="${perso.name}"></a>
 </li>
 </ul>
-<nav>
+<nav th:fragment="menu">
 	<ul>
-		<li><a th:href="@{/addPerso}">Créer un personnage</a>	</li>
+		<li><a th:href="@{/addPerso}">Créer un personnage</a></li>
+		<li><a th:href="@{/listPerso}">Liste des personnages</a>
 	</ul>
 </nav>
 
