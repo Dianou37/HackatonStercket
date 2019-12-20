@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Monster Battle - Web edition</title>
+</head>
+<body>
+	<h1 th:text="${monstre.name}"></h1>
+	<ul>
+		<li th:text="'Attaque : ' + ${monstre.attack}"></li>
+		<li th:text="'Points de vie : ' + ${monstre.hp}"></li>
+		<li th:text="'Points de vie MAX : ' + ${monstre.maxHp}"></li>
+	</ul>
+	<nav th:insert="listMonstre :: menu"></nav>
+</body>
+</html>

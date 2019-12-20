@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: sans-serif;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.884);
+    writing-mode: color white;
+    padding: 10px;
+}
+
+.topbar nav {
+    float: left;
+}
+
+.topbar nav a {
+    color: #ffffff9f;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 53px;
+}
+
+.topbar nav a:hover, .topbar nav a.active {
+    color: #000;
+}
+
+.banniere {
+    width: 100%;
+    height: 300px;
+    background-color: grey;
+}
+
+.h2 {
+    text-align: center;
+}
+
+.background {
+    display: flex;
+    flex-direction: row;
+}
+
+.photo {
+    background-color: grey;
+    width: 50%;
+    height: 300px;
+    margin: 15px;
+}
+
+.email {
+    width: 100%;
+}
+
+.text {
+    width: 100%;
+}
+
+.textarea {
+    width: 100%;
+}
+
+.placeholder {
+    width: 100%;
+    height: 200px;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+}
+
+
+@media screen and (max-width: 962px)
+{
+
+.background {
+    display: none;
+}
+
+.photo {
+    display: none;
+}
+
+.h2 {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.banniere{
+    display: none;
+}
+}

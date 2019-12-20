@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/style.css}">
+<title>Monster Battle - Web edition</title>
+</head>
+<body>
+	<h1>Les Monstres</h1>
+	<ul>
+		<li th:each="monstre : ${monstres}">
+			<a th:href="@{'/show/' + ${monstre.id}}" th:text="${monstre.name}"></a>
+		</li>
+	</ul>
+	<nav th:fragment="menu">
+		<ul>
+			<li><a th:href="@{/add}">Créer un Monstre</a></li>
+			<li><a th:href="@{/}">Consulter le Monstrodex</a></li>
+		</ul>
+	</nav>
+
+</body>
+</html>

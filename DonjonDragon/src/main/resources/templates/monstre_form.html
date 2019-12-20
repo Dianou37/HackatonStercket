@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Monster Battle - Web edition</title>
+</head>
+<body>
+	<h1>Crée votre Monstre</h1>
+	<form th:object="${monstre}" method="post" th:action="@{/add}">
+		<p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</p>
+		<label for="name">Name : </label>
+		<input id="name" type="text" th:field="*{name}"/><br>
+		<button type="submit">Submit</button>
+	</form>
+	<nav th:insert="listMonstre :: menu"></nav>
+</body>
+</html>
