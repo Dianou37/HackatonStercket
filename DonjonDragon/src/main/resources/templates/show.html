@@ -10,7 +10,10 @@
 	<body>
 		<h1 th:text="${arme.name}"></h1>
 		<ul>
-			<li th:text="${arme.degat}"></li>
+			<li th:text="'Degat : ' + ${arme.degat}"></li>
+			<li th:text="'Durabilité : ' + ${arme.durabilite}"></li>
+			<li th:text="'Portée : ' + ${arme.portee}"></li>
+			<li th:text="'Précision : ' + ${arme.precision}"></li>
 		</ul>
 		<nav th:insert="list :: menu"/>
 	</body>
